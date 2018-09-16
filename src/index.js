@@ -11,17 +11,11 @@ import { createStore, applyMiddleware } from "redux";
 import reduxThunk from "redux-thunk";
 import reducers from "./reducers";
 import registerServiceWorker from './registerServiceWorker';
-import Header from './components/Header';
 import Home from './components/Home';
+import Header from './components/Header';
+import Login from './components/Login';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
-
-class Hello extends React.Component {
-    render() { return <div>Hello</div> }
-}
-class Goodbye extends React.Component {
-    render() { return <div>Goodbye</div> }
-}
 
 ReactDOM.render(
     <Provider store={store}>
@@ -29,8 +23,7 @@ ReactDOM.render(
             <div className="content">
                 <Header />
                 <Switch>
-                    <Route path="/h" component={Hello} />
-                    <Route path="/g" component={Goodbye} />
+                    <Route path="/login" component={Login} />
                     <Route path="/" component={Home} />
                 </Switch>
             </div>

@@ -11,7 +11,6 @@ export default class Home extends Component {
                 </p>
                 <p>React Redux Firebase</p>
             </div>
-
         )
     }
 }
