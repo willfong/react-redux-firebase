@@ -12,8 +12,7 @@ import reduxThunk from "redux-thunk";
 import reducers from "./reducers";
 import registerServiceWorker from './registerServiceWorker';
 import Home from './components/Home';
-import Header from './components/Header';
-import Login from './components/Login';
+import App from './components/App';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -21,9 +20,8 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div className="content">
-                <Header />
                 <Switch>
-                    <Route path="/login" component={Login} />
+                    <Route path="/app" component={App} />
                     <Route path="/" component={Home} />
                 </Switch>
             </div>

@@ -7,9 +7,9 @@ import HeaderLogin from './HeaderLogin';
 class Header extends Component {
     authenticate = () => {
         if (this.props.auth.uid) {
-            return <HeaderAuth />
+            return <HeaderAuth {...this.props}/>
         } else {
-            return <HeaderLogin />
+            return <HeaderLogin {...this.props}/>
         }
     }
 
